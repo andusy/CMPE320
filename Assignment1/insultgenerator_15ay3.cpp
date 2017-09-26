@@ -10,10 +10,10 @@
 #include "insultgenerator_15ay3.h"
 using namespace std;
 
-int main(){
-	const int NUM_INSULTS_TO_GEN (10000);
+int main(){;
 
-	for (int i = 0; i < NUM_INSULTS_TO_GEN ;i++){
-	}
+	InsultGenerator ig;
+	ig.initialize();
+	ig.toString();
 }
 
