@@ -8,42 +8,37 @@
 #include <string>
 #include <iostream>
 #include <fstream>
-#include <sstream>
 #include <vector>
-#include <iterator>
 
 using namespace std;
 
-///////////////////////////////////////////////////////
-////////	Split a string by a delimiter//////////////
-template<typename Out>
-void split(const std::string &s, char delim, Out result) {
-    std::stringstream ss;
-    ss.str(s);
-    std::string item;
-    while (std::getline(ss, item, delim)) {
-        *(result++) = item;
-    }
-}
-
-std::vector<std::string> split(const std::string &s, char delim) {
-    std::vector<std::string> elems;
-    split(s, delim, std::back_inserter(elems));
-    return elems;
-}
-///////////////////////////////////////////////////////
-class FileException {
-
+// FileException class
+class FileException{
+public:
+	FileException(const string& message);
+	string& what();
+private:
+	string message;
 };
 
+// NumInsultsOutOfBounds class
 class NumInsultsOutOfBounds{
-
+public:
+	NumInsultsOutOfBounds(const string& message);
+	string& what();
+private:
+	string message;
 };
 
+// InsultGenerator class
 class InsultGenerator{
 public:
 	// Variable Declaration
-	string words[50]; // The list of words read from the text file
+	vector<string> col1; // List of words from the first column
+	vector<string> col2; // List of words from the second column
+	vector<string> col3; // List of words from the third column
+	const int LEGALMAX = 10000; // Legal number of insults
+	const string FILE_TO_READ = "InsultsSource.txt"; // The text file containing the words to be read
 
 	// Constructor
 	InsultGenerator(){ // Empty Constructor
@@ -51,37 +46,7 @@ public:
 
 	// Functions
 	void initialize(void); // Loads all the source phrases from the InsultsSource.txt file into the attributes
-	void toString(void);
+	string talkToMe(void); // Returns a single insult, generated at random
+	vector<string> generate(int numToGenerate); // Generates the requested number of unique insults
+	void generateAndSave(string fileName, int numToGenerate); // Generates the requested number of unique insults and saves them to the file name
 };
-
-// InsultGenerator member functions
-void InsultGenerator::initialize(){
-	string str = "";
-	string line;
-	ifstream in("InsultsSource.txt");
-	if (in.is_open()){
-
-		// Concatenate all of the lines in the text document to one string
-		while(getline(in,line)){
-			str += line;
-		}
-
-		// Split the string by tabs into an array
-		std::vector<std::string> insults = split(str, '\t');
-
-		// Copy the words into the array
-		for (int i = 0; i < 50; i++){
-			words[i] = insults[i];
-		}
-
-		in.close();
-	} else {
-		cout << "Unable to open file";
-	}
-}
-
-void InsultGenerator::toString(void){
-	for (int i = 0; i < 50; i++){
-		cout << words[i] << endl;
-	}
-}
