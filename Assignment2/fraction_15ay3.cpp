@@ -229,25 +229,26 @@ ostream &operator<<(ostream &out, const Fraction &f){
 istream &operator>>(istream &in, Fraction &f){
 	char c;
 	int n, d;
-	// Set numerator
+	// Sets the numerator
 	in >> n;
 	f.numer = n;
-	f.denom = 1;
 
-	// Check for slash
+	// Check if the next character is a /
 	c = in.peek();
 	if(c == '/')
 		in >> c;
 	else
 		return in;
-	// Check denominator
+
+	// Check if the denominator is invalid
 	c = in.peek();
 	if(c == '0')
-		throw FractionException("Cannot divide by 0");
+		throw FractionException("Denominator can not be zero!");
 	else if(isdigit(c)) {
 		in >> d;
-	    f.numer = n;
-	    f.denom = d;
+	    f.denom = d; // Set the denominator
+	} else { // Default of no denominator is entered
+		f.denom = 1;
 	}
 	return in;
 }
