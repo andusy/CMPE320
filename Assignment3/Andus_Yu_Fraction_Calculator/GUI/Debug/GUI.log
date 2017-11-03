@@ -1,0 +1,3 @@
+﻿  Andus_Yu_Fraction_Calculator_GUI.cpp
+c:\repos\cmpe320\assignment3\andus_yu_fraction_calculator\gui\Andus_Yu_Fraction_Calculator_GUI.h(209): warning C4101: 'e': unreferenced local variable
+  GUI.vcxproj -> C:\repos\CMPE320\Assignment3\Andus_Yu_Fraction_Calculator\Debug\GUI.exe

@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Andus_Yu_Fraction_Calculator", "Andus_Yu_Fraction_Calculator\Andus_Yu_Fraction_Calculator.vcxproj", "{DFC3A724-4D02-4C57-A745-E1E4FE7314C4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GUI", "GUI\GUI.vcxproj", "{B2E36C1B-106A-4D0E-84C3-D10B77799576}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFC3A724-4D02-4C57-A745-E1E4FE7314C4}.Debug|x64.ActiveCfg = Debug|x64
+		{DFC3A724-4D02-4C57-A745-E1E4FE7314C4}.Debug|x64.Build.0 = Debug|x64
+		{DFC3A724-4D02-4C57-A745-E1E4FE7314C4}.Debug|x86.ActiveCfg = Debug|Win32
+		{DFC3A724-4D02-4C57-A745-E1E4FE7314C4}.Debug|x86.Build.0 = Debug|Win32
+		{DFC3A724-4D02-4C57-A745-E1E4FE7314C4}.Release|x64.ActiveCfg = Release|x64
+		{DFC3A724-4D02-4C57-A745-E1E4FE7314C4}.Release|x64.Build.0 = Release|x64
+		{DFC3A724-4D02-4C57-A745-E1E4FE7314C4}.Release|x86.ActiveCfg = Release|Win32
+		{DFC3A724-4D02-4C57-A745-E1E4FE7314C4}.Release|x86.Build.0 = Release|Win32
+		{B2E36C1B-106A-4D0E-84C3-D10B77799576}.Debug|x64.ActiveCfg = Debug|x64
+		{B2E36C1B-106A-4D0E-84C3-D10B77799576}.Debug|x64.Build.0 = Debug|x64
+		{B2E36C1B-106A-4D0E-84C3-D10B77799576}.Debug|x86.ActiveCfg = Debug|Win32
+		{B2E36C1B-106A-4D0E-84C3-D10B77799576}.Debug|x86.Build.0 = Debug|Win32
+		{B2E36C1B-106A-4D0E-84C3-D10B77799576}.Release|x64.ActiveCfg = Release|x64
+		{B2E36C1B-106A-4D0E-84C3-D10B77799576}.Release|x64.Build.0 = Release|x64
+		{B2E36C1B-106A-4D0E-84C3-D10B77799576}.Release|x86.ActiveCfg = Release|Win32
+		{B2E36C1B-106A-4D0E-84C3-D10B77799576}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A9FF40D0-6E44-44F3-8A45-15A3415153E5}
+	EndGlobalSection
+EndGlobal
