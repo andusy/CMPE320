@@ -23,15 +23,15 @@ Shape::Shape(int l, int w, std::string b) : length(l), width(w), border(b){}
 Square::Square(int l, int w, std::string b) : Shape(l,w,b){}
 
 // Draw the border for the square
-void Square::drawBorder(){
-	std::cout << "Drawing a Square with a " << border << " border." << std::endl;
+void Square::drawOutside(){
+	std::cout << "\nDrawing a " + border + " square.";
 }
 // FilledSquare
 FilledSquare::FilledSquare(int l, int w, std::string b, std::string fc) : Square(l,w,b), Fillable(fc){}
 
 // Fill the square
-void FilledSquare::addFill(){
-	std::cout << "Filling Square with " << fillColor << "." << std::endl;
+void FilledSquare::fill(){
+	std::cout << " With " + fillColor + " fill.";
 }
 
 // FilledTextSquare
@@ -40,7 +40,7 @@ FilledTextSquare::FilledTextSquare(int l, int w, std::string b, std::string fc, 
 
 // Add a label to the filled square
 void FilledTextSquare::addLabel(){
-	std::cout << "Label \"" << shapeLabel << "\" added to the shape." << std::endl;
+	std::cout << " Containing the text: \"" << shapeLabel << "\".";
 }
 
 // Circle
@@ -48,16 +48,16 @@ void FilledTextSquare::addLabel(){
 Circle::Circle(int l, int w, std::string b) : Shape(l, w, b){}
 
 // Draw a border for the circle
-void Circle::drawBorder(){
-	std::cout << "Drawing a Circle with a " << border << " border." << std::endl;
+void Circle::drawOutside(){
+	std::cout << "\nDrawing a " + border + " circle.";
 }
 
 // FilledCircle
 FilledCircle::FilledCircle(int l, int w, std::string b, std::string fc) : Circle(l,w,b), Fillable(fc){}
 
 // Fill the circle
-void FilledCircle::addFill(){
-	std::cout << "Filling Circle with " << fillColor << "." << std::endl;
+void FilledCircle::fill(){
+	std::cout << " With " + fillColor + " fill.";
 }
 
 // Arc
@@ -65,6 +65,6 @@ void FilledCircle::addFill(){
 Arc::Arc(int l , int w, std::string b) : Shape(l, w, b){}
 
 // Draw the Arc
-void Arc::drawBorder(){
-	std::cout << "Drawing an Arc with a " << border << " border." << std::endl;
+void Arc::drawOutside(){
+	std::cout << "\nDrawing a " + border + " arc.";
 }

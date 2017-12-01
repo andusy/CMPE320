@@ -31,7 +31,7 @@ public:
 
 protected:
 	std::string fillColor; // Color
-	virtual void addFill() = 0; // Fills the shape
+	virtual void fill() = 0; // Fills the shape
 };
 
 class Shape{
@@ -54,35 +54,36 @@ protected:
 	std::string border; // Inherited attribute
 
 	// Function to be implemented in each inherited class (Draws the border)
-	virtual void drawBorder() = 0;
+	virtual void drawOutside() = 0;
 };
 
 class Square : public Shape{
 public:
 	Square(int, int, std::string);
 	virtual void draw(){
-		drawBorder();
+		drawOutside();
 	}
 protected:
-	virtual void drawBorder();
+	virtual void drawOutside();
 };
 
 class FilledSquare : public Square, Fillable{
 public:
 	FilledSquare(int, int, std::string, std::string);
 	virtual void draw(){
-		drawBorder();
-		addFill();
+		drawOutside();
+		fill();
 	}
 protected:
-	virtual void addFill();
+	virtual void fill();
 };
 
 class FilledTextSquare : public FilledSquare, Label{
 public:
 	FilledTextSquare(int, int, std::string, std::string, std::string);
 	virtual void draw(){
-		drawBorder();
+		drawOutside();
+		fill();
 		addLabel();
 	}
 protected:
@@ -93,31 +94,31 @@ class Circle : public Shape{
 public:
 	Circle(int, int, std::string);
 	virtual void draw(){
-		drawBorder();
+		drawOutside();
 	}
 protected:
-	virtual void drawBorder();
+	virtual void drawOutside();
 };
 
 class FilledCircle : public Circle, Fillable{
 public:
 	FilledCircle(int, int, std::string, std::string);
 	virtual void draw(){
-		drawBorder();
-		addFill();
+		drawOutside();
+		fill();
 	}
 private:
-	virtual void addFill();
+	virtual void fill();
 };
 
 class Arc : public Shape{
 public:
 	Arc(int, int, std::string);
 	virtual void draw(){
-		drawBorder();
+		drawOutside();
 	}
 private:
-	virtual void drawBorder();
+	virtual void drawOutside();
 };
 
 #endif /* SHAPESGOOD_H_ */
