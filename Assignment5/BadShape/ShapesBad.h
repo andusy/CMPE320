@@ -11,7 +11,7 @@
  * from the ugly code in TestBadShapes.cpp, this structure does not support polymorphism.
  *
  * For CISC/CMPE 320, Assignment 5
- */
+ *//*
 #pragma once
 
 #include <string>
@@ -66,4 +66,4 @@ class Arc : public Shape {
 public:
 	Arc(int, int);
 	void draw(string);
-};
+};*/

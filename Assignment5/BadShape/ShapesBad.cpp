@@ -5,6 +5,7 @@
  *
  * For CISC/CMPE 320, Assignment 5
  */
+/*
 #include <iostream>
 #include <string>
 #include "ShapesBad.h"
@@ -59,4 +60,4 @@ void Arc::draw(string colour) {
 	cout << "\nDrawing a " + colour + " arc.";
 }
 
-
+*/

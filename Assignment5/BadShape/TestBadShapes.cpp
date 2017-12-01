@@ -17,7 +17,7 @@
 #include "ShapesBad.h"
 
 using namespace std;
-
+/*
 int main() {
 
 	int count(0);
